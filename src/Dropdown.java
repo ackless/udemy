@@ -1,4 +1,4 @@
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebDriver;
