@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class RadioButtons {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         System.setProperty("webdriver.chrome.driver", "c:\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -16,10 +16,10 @@ public class RadioButtons {
         System.out.println("The size of the \"group 1\" is " + listSize + " element/s");
 
         System.out.println("Lets get names of the radiobutton\'s elements:");
-        for(int i=0; i<listSize; i++) {
+        for (int i = 0; i < listSize; i++) {
             String value = driver.findElements(By.xpath("//input[@name='group1']")).get(i).getAttribute("value");
             System.out.println(value);
-            if(value.equals("Cheese")){
+            if (value.equals("Cheese")) {
                 System.out.println("Let's click on Cheese");
                 driver.findElements(By.xpath("//input[@name='group1']")).get(i).click();
             }

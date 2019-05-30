@@ -7,7 +7,7 @@ public class AlertDemo {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver","c:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "c:\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://demo.guru99.com/test/delete_customer.php");
