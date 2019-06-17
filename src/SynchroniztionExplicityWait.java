@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SynchroniztionExplicityWait {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "c:\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
