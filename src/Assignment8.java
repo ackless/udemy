@@ -1,15 +1,15 @@
 package src;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.IOException;
 
 public class Assignment8 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         System.setProperty("webdriver.chrome.driver","c:\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -25,5 +25,8 @@ public class Assignment8 {
             searchBox.sendKeys(Keys.DOWN);
             fieldValue = (String) js.executeScript(script);
         }
+
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshot, new File("c://users/admin/screenshot.png"));
     }
 }
