@@ -3,17 +3,25 @@ package src.testng;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class day1 {
+
     @Test(groups = {"Smoke"})
-    public void Base(){
-        System.out.println("Hello!");
+    public void Alpha(){
+        System.out.println("Hello Alpha!");
     }
 
-    @Test
-    public void SecondTest(){
-        System.out.println("Bye");
+    @Test(groups = {"Smoke"})
+    public void Base(){
+        System.out.println("Hello Base!");
+    }
+
+    @Parameters({"URL"})
+    @Test(groups={"Smoke"}, dependsOnMethods = {"Base"})
+    public void SecondTest(String URL){
+        System.out.println(URL);
     }
 
     @BeforeTest
